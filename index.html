@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Pricing Component</title>
 </head>
+
 <body>
     <header class="header">
         <div class="header__center-bg">
             <img src="./assets/images/pattern-circles.svg" aria-hidden="true" alt="">
         </div>
         <div class="header--center">
-            <h1 class="header__heading--h1">
+            <h1 class="header__heading">
                 Simple, traffic-based pricing
             </h1>
             <p class="header__descprition">
@@ -19,5 +21,60 @@
             </p>
         </div>
     </header>
+    <main>
+        <form class="pricing-card">
+            <div class="pricing-card__top">
+                <div class="pricing-card__page-views">
+                    <label for="pageviews-slider" class="pricing-card__page-views-description">
+                        <output id="pageviews-output">100K</output> Pageviews
+                    </label>
+                </div>
+                <div class="pricing-card__price">
+                    <p class="pricing-card__price-description">
+                        <span id="price-output">$16.00</span>
+                        <span id="billing-period">/ month</span>
+                    </p>
+                </div>
+
+                <input type="range" id="pageviews-slider" class="pricing-card__slider" min="1" max="5" value="3"
+                    step="1" aria-label="Select pageviews tier">
+            </div>
+            <div class="pricing-card__center">
+                <span class="pricing-card__month">Monthly Billing</span>
+
+                <label class="pricing-card__switch" for="billing-toggle">
+                    <input type="checkbox" id="billing-toggle" class="pricing-card__switch-input" role="switch">
+                    <div class="pricing-card__switch-visual"></div>
+                </label>
+
+                <span class="pricing-card__year">Yearly Billing</span>
+                <span class="pricing-card__discount">25% discount</span>
+            </div>
+
+            <div class="pricing-card__bottom">
+                <ul class="pricing-card__features-list">
+                    <li class="pricing-card__feature">
+                        <img src="./assets/images/icon-check.svg" aria-hidden="true" alt="">
+                        Unlimited websites
+                    </li>
+                    <li class="pricing-card__feature">
+                        <img src="./assets/images/icon-check.svg" aria-hidden="true" alt="">
+                        100% data ownership
+                    </li>
+                    <li class="pricing-card__feature">
+                        <img src="./assets/images/icon-check.svg" aria-hidden="true" alt="">
+                        Email reports
+                    </li>
+                </ul>
+
+                <div class="pricing-card__cta-area">
+                    <button type="submit" class="pricing-card__trial-btn">
+                        Start my trial
+                    </button>
+                </div>
+            </div>
+        </form>
+    </main>
 </body>
+
 </html>
